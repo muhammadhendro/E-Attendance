@@ -3,7 +3,7 @@ import {StyleSheet, View, Text} from 'react-native';
 
 import {Logo, Ilustrasi} from '../../assets';
 import {Inputan, Jarak, Tombol} from '../../components';
-import {colors, responsiveHeight} from '../../utils';
+import {colors, fonts, responsiveHeight} from '../../utils';
 
 export default class Login extends Component {
   render() {
@@ -17,11 +17,11 @@ export default class Login extends Component {
 
           <Inputan label="Password" secureTextEntry />
           <Jarak height={25} />
-          <Tombol title="Login" type="text" padding={12} fontSize={18} />
+          <Tombol title="Login" type="text" padding={12} fontSize={18} onPress={() => this.props.navigation.navigate('MainApp')} />
         </View>
         <View style={styles.register}>
-          <Text style={styles.textBlue}>Login sebagai Guru/Orang Tua</Text>
-        </View>
+          <Text style={styles.textBlue} onPress={() => this.props.navigation.navigate('Register1')} >Login sebagai Guru/Orang Tua</Text>
+        </View> 
         <View style={styles.ilustrasi}>
           <Ilustrasi />
         </View>
@@ -60,4 +60,13 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginTop: 10,
   },
+  register: {
+    alignItems: 'center',
+    marginTop: 10,
+  },
+   textBlue: {
+     fontSize: 16,
+     fontFamily: fonts.primary.bold,
+     color: colors.primary,
+   }
 });

@@ -4,5 +4,7 @@ import Absen from './Absen'
 import Tugas from './Tugas'
 import Profile from './Profile'
 import Login from './Login'
+import Register1 from './Register/Register1'
 
-export {Home, Splash, Absen, Tugas, Profile, Login}
+
+export {Home, Splash, Absen, Tugas, Profile, Login, Register1}
