@@ -5,9 +5,10 @@ import { colors } from '../../utils'
 
 export default class Home extends Component {
     render() {
+        
         return (
             <View style={styles.page}>
-            <HeaderComponent />
+            <HeaderComponent navigation={this.props.navigation} />
             
           </View>
         )

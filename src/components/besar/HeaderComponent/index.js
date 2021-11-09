@@ -11,9 +11,10 @@ export default class HeaderComponent extends Component {
         <View>
           <Text style={styles.text}>Pak Bowo</Text>
         </View>
-        <TouchableOpacity style={styles.icon}  >
+        <TouchableOpacity style={styles.icon} onPress={() => this.props.navigation.navigate('Profile')} >
           <IconProfileAktif />
         </TouchableOpacity>
+        
       </View>
     );
   }

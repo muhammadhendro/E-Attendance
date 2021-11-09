@@ -3,5 +3,6 @@ import Splash from './Splash'
 import Absen from './Absen'
 import Tugas from './Tugas'
 import Profile from './Profile'
+import Login from './Login'
 
-export {Home, Splash, Absen, Tugas, Profile}
+export {Home, Splash, Absen, Tugas, Profile, Login}

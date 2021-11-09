@@ -1,7 +1,7 @@
 import React from 'react';
 //import { View, Text } from 'react-native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Home, Splash, Absen, Tugas, Profile} from '../pages';
+import {Home, Splash, Absen, Tugas, Profile, Login} from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigator} from '../components';
 
@@ -14,7 +14,7 @@ const MainApp = () => {
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Absen" component={Absen} />
       <Tab.Screen name="Tugas" component={Tugas} />
-      
+   
     </Tab.Navigator>
   );
 };
@@ -32,6 +32,17 @@ const Router = () => {
         component={MainApp}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{headerShown: false}}
+      />
+      
       
     </Stack.Navigator>
   );
